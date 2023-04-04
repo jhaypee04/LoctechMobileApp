@@ -1,41 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:m/LoctechMobileApp/Presentations/screens/loctech_instructors.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(LoctechMobileApp());
+}
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class LoctechMobileApp extends StatelessWidget {
+  // const Loctech({super.key})
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      title: "Loctech Mobile App",
+      // home: Home(),
+      home: LoctechInstructors(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
-  }
-}
+// class Home extends StatelessWidget {
+//   // const Home({super.key})
+//   final profileImage =
+//       'https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/330567788_773736734093115_5651617552966218097_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHMBE_xTUZkqhjyZ07cT9ty0grr4UtwxR_SCuvhS3DFH0zF_AmPLM7daDmq746SB4Prz-n2RRi1wTYC9N4oJQQR&_nc_ohc=wuY0n3z0bUoAX8Npv0Y&_nc_ht=scontent-los2-1.xx&oh=00_AfDPxPuqgG_9uMpFgRbujnfz3UTcuuYYfn-wneWqaKaaHw&oe=64318A8C';
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
+//   }
+// }

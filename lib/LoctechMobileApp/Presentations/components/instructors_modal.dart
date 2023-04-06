@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class InstructorModal extends StatelessWidget {
+  const InstructorModal({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      color: Color(0xff07ff30),
+      color: const Color(0xff07ff30),
       child: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           InstructorCourseItem(),
           InstructorCourseItem(),
           InstructorCourseItem(),
@@ -19,6 +20,7 @@ class InstructorModal extends StatelessWidget {
 }
 
 class InstructorCourseItem extends StatelessWidget {
+  const InstructorCourseItem({Key? key}) : super(key: key);
   final courseLogo =
       "https://www.mindinventory.com/blog/wp-content/uploads/2022/10/flutter-3.png";
   @override
@@ -43,7 +45,7 @@ class InstructorCourseItem extends StatelessWidget {
                   color: const Color(0xff706c6c),
                   width: 200,
                   height: 30,
-                  child: Text('handling:')),
+                  child: const Text('handling:')),
               const SizedBox(
                 height: 10,
               ),
@@ -51,7 +53,7 @@ class InstructorCourseItem extends StatelessWidget {
                   color: const Color(0xff706c6c),
                   width: 250,
                   height: 30,
-                  child: Text('Course Handling')),
+                  child: const Text('Course Handling')),
             ],
           ),
         ],

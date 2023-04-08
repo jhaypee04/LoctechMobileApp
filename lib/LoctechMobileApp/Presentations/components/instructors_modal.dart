@@ -5,16 +5,14 @@ class InstructorModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      color: const Color(0xff07ff30),
-      child: ListView(
-        children: const <Widget>[
-          InstructorCourseItem(),
-          InstructorCourseItem(),
-          InstructorCourseItem(),
-          InstructorCourseItem(),
-        ],
-      ),
+      height: 400,
+      color: Colors.blue[500],
+      child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          itemCount: 1,
+          itemBuilder: (BuildContext context, int index) {
+            return const InstructorCourseItem();
+          }),
     );
   }
 }
@@ -25,39 +23,15 @@ class InstructorCourseItem extends StatelessWidget {
       "https://www.mindinventory.com/blog/wp-content/uploads/2022/10/flutter-3.png";
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-      margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-      height: 80,
-      color: Colors.blue.shade400,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          CircleAvatar(
-            radius: 30.0,
-            backgroundImage: NetworkImage(courseLogo),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              Container(
-                  color: const Color(0xff706c6c),
-                  width: 200,
-                  height: 30,
-                  child: const Text('handling:')),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                  color: const Color(0xff706c6c),
-                  width: 250,
-                  height: 30,
-                  child: const Text('Course Handling')),
-            ],
-          ),
-        ],
-      ),
+    return const Card(
+      child: ListTile(
+          leading: FlutterLogo(),
+          title: Text('Handling:'),
+          subtitle: Text('Flutter and Dart')),
     );
   }
 }
+// CircleAvatar(
+//         radius: 30.0,
+//         backgroundImage: NetworkImage(courseLogo),
+//       ),

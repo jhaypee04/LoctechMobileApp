@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:m/LoctechMobileApp/Presentations/screens/loctech_instructors.dart';
+import 'package:m/LoctechMobileApp/Presentations/screens/staffs.dart';
+import 'package:m/LoctechMobileApp/Presentations/screens/courses.dart';
+import 'package:m/LoctechMobileApp/Presentations/screens/home.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -10,9 +12,9 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    const Text("Home"),
-    const Text("Courses"),
-    const LoctechInstructors(),
+    const Home(),
+    const Courses(),
+    const Staffs(),
     const Text("Contact Us"),
     const Text("Food Canteen"),
   ];
